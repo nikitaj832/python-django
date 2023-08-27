@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+   <style> 
+     .container{
+        height:100%;
+        width:100%;
+      
+     }
+    .a{
+    height: 100%;
+    width : 48%;
+   background-color: white;
+ 
+    margin: 2px;
+    display:inline-block;
+    
+    }
+    .picture{
+        height:500px;
+        width:300px;
+        position:relative;
+        left :200px;
+        background-color: black;
+       
+        
+    }
+    .b{
+        display: inline-block;
+      
+        height:88%;
+        width:50%;
+    }
+   .c{
+   
+    height:100px;
+ 
+    width:100%
+   }
+   .or-container{
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    margin: 10px 40px 18px;
+    width: 100%;
+  }
+  
+  .line{
+    background-color: rgb(var(--border-color));
+    height: 1px;
+    position: relative;
+    top: .45em;
+  }
+
+
+   .photo{
+    height: 100px;
+    width:175px;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   }
+   .d{
+    height:20%;
+    width:100px;
+    border: 2px dashed red;
+   }
+   .e{
+    height:20%;
+    inset-block: 20%;}
+    .p1{
+      height:50px;
+      width:200px;
+      display: inline-block;
+    }
+    .p2{
+      height:50px;
+      width:200px;
+    }
+    #login-form{
+      display: flex;
+      align-content: center;
+      justify-content: center;
+      flex-direction: column;
+      margin-top: 24px;
+    }
+    .form-content{
+      margin: 0 40px 6px;
+      width: 100%;}
+    .form-content input{
+      width: 100%;
+      padding: 9px 0 7px 8px;
+      border: 1px solid rgb(var(--border-color),1);
+      border-radius: 2px;
+      outline: none;}
+    .form-content input:focus{
+      border-color: rgb(180,180,180)}
+
+   
+</style>
+</head>
+<body>
+    <div class="container">
+    <div class="a">
+       <img class="picture" src="insta.png" alt=""> </div>
+        <div class="b">
+      <img class="photo"  src="1.png" alt="">
+      <form id="login-form">
+        <div class="form-content">
+          <input type="text" name="uname"  placeholder="Phone number, username, or email" />
+          <label for="uname"> Phone number, username, or email</label>
+        </div>
+        <div class="form-content">
+          <input type="password" name="password" required />
+          <label for="password">Password</label>
+        </div>
+        <div class="form-content">
+          <button type="submit">Log in</button>
+        </div>
+        <div class="form-ending">
+            <div class="or-container">
+                <div class="line"></div>
+                <div class="or">------OR------</div>
+                <div class="line"></div>
+              </div>
+<!--             
+            <div class="line"></div>
+            <p id="OR" style="text-align: center;">OR</p>
+            <span id="line"></span>  -->
+          <p id="facebook"><i class="fab fa-facebook-square"></i>Login with Facebook</p>
+          <a href="#">Forgot password?</a>
+          <div class="d"></div>
+          <div class="e">
+            <img src="apple-button.png" alt="" class="p1">
+            <img src="googleplay-button.png" alt="" class="p2">
+          </div>
+        </div>
+
+
+        </form>>
+    </div> 
+    <div class="c">
+
+    </div>
+</div>
+</body>
+</html>
