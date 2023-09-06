@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .box{
+           height: 400px;
+           width: 400px;
+           margin: auto;
+           background-color: yellow;
+           margin-top:300px;
+           box-shadow:inset 5px 5px 50px orangered , 5px 5px 50px white; 
+           border-radius: 20px;  
+        }
+        img{
+            height: 100%;
+            width: 100%;
+            opacity:0.4;
+            border-radius:20px;
+            transition: all 5s;
+        }
+        img:hover{
+            opacity:1;
+            cursor: pointer;
+        }
+        #box1{
+            background-color: yellow;
+            height: 400px;
+            width: 400px;
+            padding: 80px;
+            border:10px solid black;
+            box-sizing: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+   <img src="https://source.unsplash.com/300x200/?mountain" alt="">
+    </div>
+    <div class="box" id="box1">
+            <h2>MY name is nikita</h2></div>
+</body>
+</html>

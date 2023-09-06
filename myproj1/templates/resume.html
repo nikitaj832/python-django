@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: rgb(216, 218, 221);
+        height: 210vh;
+        width: 100%;
+    }
+.box{
+        display: flex;
+    }
+.box1{
+    height: 180vh;
+    width: 70vh;
+    border: 2px solid black;
+    padding-left: 5px;
+}
+.box2{
+    border: 2px dashed green;
+    height: 190vh;
+    width: 100%;
+}
+.item1{
+    border: 2px solid red;
+    height: 53%;
+    width: 99%;
+}
+.item2{
+    width: 99%;
+    border: 2px solid yellow;
+    height: 46%;
+}
+.footer{
+    
+    background-color: rgb(30, 170, 154);
+    width: 100%;
+    height: 130px;
+    text-align: center;
+ }
+p{
+    padding-top: 15px;
+    color: white;
+    
+}
+
+
+</style>
+<body>
+    <div class="box">
+    <div class="box1">
+        <div class="w3-third">
+    
+            <div class="w3-white w3-text-grey w3-card-4">
+              <div class="w3-display-container">
+                <img src="data:image/jpeg;base64,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" style="width:100%" alt="Avatar">
+                <div class="w3-display-bottomleft w3-container w3-text-black">
+                  <h2>Jane Doe</h2>
+                </div>
+              </div>
+              <div class="w3-container">
+                <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>Designer</p>
+                <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>London, UK</p>
+                <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>ex@mail.com</p>
+                <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>1224435534</p>
+                <hr>
+      
+                <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+                <p>Adobe Photoshop</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                  <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+                </div>
+                <p>Photography</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                  <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:80%">
+                    <div class="w3-center w3-text-white">80%</div>
+                  </div>
+                </div>
+                <p>Illustrator</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                  <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:75%">75%</div>
+                </div>
+                <p>Media</p>
+                <div class="w3-light-grey w3-round-xlarge w3-small">
+                  <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:50%">50%</div>
+                </div>
+                <br>
+      
+                <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+                <p>English</p>
+                <div class="w3-light-grey w3-round-xlarge">
+                  <div class="w3-round-xlarge w3-teal" style="height:24px;width:100%"></div>
+                </div>
+                <p>Spanish</p>
+                <div class="w3-light-grey w3-round-xlarge">
+                  <div class="w3-round-xlarge w3-teal" style="height:24px;width:55%"></div>
+                </div>
+                <p>German</p>
+                <div class="w3-light-grey w3-round-xlarge">
+                  <div class="w3-round-xlarge w3-teal" style="height:24px;width:25%"></div>
+                </div>
+                <br>
+              </div>
+            </div><br>
+      
+          <!-- End Left Column -->
+          </div> </div>
+    <div class="box2">
+        <div class="item1">
+            <div class="w3-twothird">
+    
+                <div class="w3-container w3-card w3-white w3-margin-bottom">
+                  <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Front End Developer / w3schools.com</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2015 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+                    <p>Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+                    <hr>
+                  </div>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Web Developer / something.com</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2012 - Dec 2014</h6>
+                    <p>Consectetur adipisicing elit. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+                    <hr>
+                  </div>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>Graphic Designer / designsomething.com</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 - Mar 2012</h6>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. </p><br>
+                  </div>
+                </div>
+          
+                <div class="w3-container w3-card w3-white">
+                  
+              <!-- End Right Column -->
+              </div>
+              
+            <!-- End Grid -->
+            </div>
+        </div>
+        <div class="item2">
+            <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>W3Schools.com</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Forever</h6>
+                    <p>Web Development! All I need to know in one place</p>
+                    <hr>
+                  </div>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>London Business School</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2015</h6>
+                    <p>Master Degree</p>
+                    <hr>
+                  </div>
+                  <div class="w3-container">
+                    <h5 class="w3-opacity"><b>School of Coding</b></h5>
+                    <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2010 - 2013</h6>
+                    <p>Bachelor Degree</p><br>
+                  </div>
+                </div>
+          
+        </div>
+    </div>
+    <div class="box"></div>
+    <div class="box"></div>
+    </div>
+
+    <footer class="footer">
+        <p><i><b>Find me on social media.</b></i></p>
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+        <p><b><i>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></b></i></p>
+      </footer>
+
+</body>
+</html>
+
+
+

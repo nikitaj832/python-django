@@ -1,5 +1,5 @@
 """
-URL configuration for regex_proj project.
+URL configuration for myproj1 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -16,13 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from regex_app import views
+from myapp1 import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/',views.index),
-    path('position/',views.position),
-    path('',views.home),
-    path('catering/',views.catering),
-    path('transition',views.transition),
+    path('contact/',views.contact),
+    path('index1/',views.index1),
+    path('forms/',views.forms),
+    path('index2/',views.index2)
+    
 ]

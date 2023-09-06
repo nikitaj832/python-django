@@ -15,3 +15,7 @@ def home(request):
 
 def catering(request):
     return render(request,'catering.html')
+
+
+def transition(request):
+    return render(request,'transition.html')
