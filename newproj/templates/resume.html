@@ -89,18 +89,15 @@
                 <div class="contact_info language">
                     <h3 class="title">Languages</h3>
                     <ul>
+                        {% for j in language %}
                         <li>
-                            <span class="text">{{i.language_1}}</span>
-                            <div class="percent">
+                            <span class="text">{{j}}</span>
+                            {% comment %} <div class="percent">
                                 <div style="width:{{i.percentage_1}}%"></div>
-                            </div>
+                            </div> {% endcomment %}
                         </li>
-                        <li>
-                            <span class="text">{{i.language_2}}</span>
-                            <div class="percent">
-                                <div style="width:{{i.percentage_2}}%"></div>
-                            </div>
-                        </li>
+                        {% endfor %}
+                      
                     </ul>
                 </div>
             </div>
@@ -136,48 +133,30 @@
     
                 <div class="about skills">
                     <h2 class="title2">Professional Skills</h2>
+                    {% for j in skill %}
                     <div class="box">
-                        <h4>{{i.skill_1}}</h4>
-                        <div class="percent"><div style="width:{{i.percent_1}}"></div></div>
+                        <h4>{{j}}</h4>
+                        <div class="percent"><div style="width:`{{i.percent_1}}%"></div></div>
                     </div>
-                    <div class="box">
-                        <h4>{{i.skill_2}}</h4>
-                        <div class="percent"><div style="width:{{i.percent_2}}%"></div></div>
-                    </div>
-                    <div class="box">
-                        <h4>{{i.skill_3}}</h4>
-                        <div class="percent"><div style="width:{{i.percent_3}}%"></div></div>
-                    </div>
-                    <div class="box">
-                        <h4>{{i.skill_4}}</h4>
-                        <div class="percent"><div style="width:{{i.percent_4}}%"></div></div>
-                    </div>
-                    <div class="box">
-                        <h4>{{i.skill_5}}</h4>
-                        <div class="percent"><div style="width:{{i.percent_5}}%"></div></div>
-                    </div>
-                    <div class="box">
-                        <h4>{{i.skill_6}}</h4>
-                        <div class="percent"><div style="width:{{i.percent_6}}%"></div></div>
-                    </div>
-                    
-    
+                    {% endfor %}
+        
                 </div>
     
                 <div class="about interest">
                     <div class="title2">Interest</div>
                     <ul>
-                        <li>{{i.interest_1}}</li>
-                        <li>{{i.interest_2}}</li>
-                        <li>{{i.interest_3}}</li>
-                        <li>{{i.interest_4}}</li>
+                        {% for j in interest %}
+                        <li>{{j}}</li>
+                        {% endfor %}
                     </ul>
                 </div>
     
             </div>
+            <p><a href="/logout/">Get out</a></p>
         </div>
        
     </form>
+
     
     {% endfor %}
     

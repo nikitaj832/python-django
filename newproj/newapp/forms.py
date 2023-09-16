@@ -1,5 +1,7 @@
 from django import forms
 from .models import resume
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 # class resume_form(forms.Form):
 #     name=forms.CharField(required=True,widget=forms.TextInput(attrs=
@@ -43,3 +45,13 @@ class resume_form(forms.ModelForm):
         # widget ={
         #     'name':forms.TextInput(attrs={'class':'form-control'})
         # }
+        
+        
+class register_form(UserCreationForm):
+    class Meta :
+        model = User
+        fields =['username','email']
+        widgets = {
+            'username' : forms.TextInput(attrs={'class':'form-control'}),
+            'email' :forms.TextInput(attrs={'class':'form-control'}),
+        }
