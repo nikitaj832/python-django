@@ -25,6 +25,7 @@ urlpatterns = [
     path('contact/',views.contact),
     path('index1/',views.index1),
     path('forms/',views.forms),
-    path('index2/',views.index2)
+    path('index2/',views.index2),
+    path('form/',views.form),
     
 ]

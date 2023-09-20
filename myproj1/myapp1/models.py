@@ -12,3 +12,4 @@ class student_details(models.Model):
     mobile_no = models.IntegerField()
     
     
+    

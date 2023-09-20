@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a= [10,20,30,40,50,6,700,90,400];
+        /*console.log(a[1])
+        for(i=0;i<a.length;i++)
+        console.log(a[i]) */
+        /*let ans = 50;
+        for(let i of a){
+            if(i==ans){
+                console.log('found')
+            }
+        }  */
+        
+        let max = 0;
+
+        for(let i of a){
+            if (i>max){
+                max=i
+            }
+        }
+        console.log(max)
+
+        let b= [10,20,30,40,50,6,700,90,400];
+        let min= 0;
+        for(let i of b){
+            if (i<min){
+                min=i
+            }
+        }
+        console.log(min)
+
+         
+    </script>
+    
+</body>
+</html>

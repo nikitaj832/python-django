@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      
+    }
+    .container{
+    
+        height: 80%;
+        width: 80%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border: 2px solid black;
+    
+
+    }
+  
+    .box1{
+       
+        height:100%;
+        width:100%;
+    }
+    .box2{
+        
+       height:100%;
+        width:50%;
+    }
+    img{
+        height:100%;
+        width:50%;
+    }
+    #about_me{
+      height: 60%;
+      width:50%
+    }
+</style>
+<body>
+{% for i in data  %}
+    <div class="container">
+        <div class="Box box1">
+            <div class="inner_box" id="img">
+                <img src="/media/{{i.image}}" alt="">
+            </div>
+            <div class="inner_box" id="about-me">
+                <h2>About Me</h2>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, earum. Sunt assumenda ut explicabo, adipisci tempora sed id voluptate sint quos deserunt dolorum, soluta quaerat iste exercitationem labore facilis eligendi.
+            </div>
+        </div>
+        <div class="Box box2">
+            <div class="personal">
+            <h2>PERSONAL DETAILS:</h2>
+            <ul>
+                <li>NAME : {{i.name}}</li>
+                <li>EMAIL:{{i.email }}</li>
+                <li>MOBILE NO:{{i.mobile_no}}</li>
+                <li>ADDRESS: {{i.address}}</li>
+            </ul>
+        </div>
+        <hr>
+        <div class="objective">
+            <h2>OBJECTIVE :</h2>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni mollitia, accusamus debitis blanditiis beatae animi odio libero officiis dolores alias dolorum fugiat vitae quis saepe minima voluptas quasi esse inventore?
+        </div>
+      <hr>
+        <div class="skills">
+            <h2>SKILLS :</h2>
+            <!-- <ul>
+                {% for j in skill %}
+                <li> {{j}} </li>
+                {% endfor %}
+            </ul>  -->
+        </div>
+    </div>
+{% endfor %}
+</body>
+</html>

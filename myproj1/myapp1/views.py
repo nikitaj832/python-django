@@ -1,5 +1,6 @@
 from django.shortcuts import render,HttpResponse
 from .models import student_details
+from .forms import myform
 # Create your views here.
 
 
@@ -26,3 +27,14 @@ def index2(request):
     }
     
     return render(request,'index2.html',context)   
+
+
+
+def form(request):
+    a = myform()
+    
+    context = {
+        'a': a
+    }
+    
+    return render(request,'form.html',context)

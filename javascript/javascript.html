@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <h1 id="h">this is my heading</h1>
+     <button id="r">Red</button>
+     <button id="g">Green</button>
+     <button id="y">Yellow</button>
+     <button id="d">Date</button>
+     <!-- <button id="b">click</button> -->
+     <p id="p"></p> 
+     <input type="text" name="" id="num1" placeholder="number1">
+     <input type="text" name="" id="num2" placeholder="num2">
+     <button id="v">click</button>
+     <input type="text" name="" id="inp" placeholder="name">
+     <input type="text" name="" id="city" placeholder="city">
+     <button id="l">click</button>
+     <h1>My name is <span id="s"></span> i am from <span id="c"></span></h1>
+      
+      <h1>Addition : <span id="x"></span></h1>
+       <h1>sub: <span id="u"></span></h1>
+       <h1>mul : <span id="z"></span></h1>
+       <h1>div: <span id="w"></span></h1>
+
+       
+     <script>
+       document.getElementById('r').onclick = function(){
+            document.getElementById('h').style.color = "red";
+        }
+        document.getElementById('g').onclick = function(){
+            document.getElementById('h').style.color = "green";
+        }
+        document.getElementById('y').onclick = function(){
+            document.getElementById('h').style.color = "yellow";
+        }
+        document.getElementById('d').onmouseover = function(){
+            document.getElementById('p').innerHTML = new Date();
+        }
+      /* document.getElementById('b').onmouseover = function(){
+            alert("Hello java script !!!")
+        } */
+        document.getElementById('v').onclick = function(){
+            let a = Number(document.getElementById('num1').value);
+            let b = Number(document.getElementById('num2').value);
+            document.getElementById('x').innerHTML = a+b;
+            document.getElementById('u').innerHTML = a-b;
+            document.getElementById('z').innerHTML = a*b;
+            document.getElementById('w').innerHTML = a/b;
+            
+        }
+        document.getElementById('l').onclick = function(){
+            let a = document.getElementById('inp').value;
+            let b = document.getElementById('city').value;
+            document.getElementById('s').innerHTML = a;
+            document.getElementById('c').innerHTML = b;
+        }
+
+      
+     </script>
+</body>
+</html>

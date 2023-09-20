@@ -73,8 +73,13 @@
    
 from django.shortcuts import render,HttpResponse
 from .models import myprofile
-# Create your views here.
+
 from .forms import profile_form
+from django.contrib.auth.forms import AuthenticationForm
+from .forms import register
+
+
+# Create your views here.
 
 
 # def profile(request):
@@ -138,3 +143,31 @@ def get_data(request):
     data= myprofile.objects.all()
     print(data)
 
+
+def get_data(request):
+    data= myprofile.objects.all()
+    # skills=[]
+    # for i in data:
+        # skill = i.skills.split(',')
+    context ={
+        'data':data
+        # 'skill':skill
+        
+    }
+    return render(request,'content.html',context)    
+
+
+
+def index(request):
+    if request.method == "POST":
+        data = register(request.POST)
+        
+        if data.is_valid():
+            data.save()
+            return HttpResponse('data saved !!!')
+    data = register()
+    return render(request,'index.html',{'data':data})
+        
+        
+        
+    

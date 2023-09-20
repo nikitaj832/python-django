@@ -1,7 +1,9 @@
 from django.shortcuts import render,HttpResponse,redirect
-from .models import resume
+from .models import resume 
 # # Create your views here.
 from .forms import resume_form,register_form
+from django.contrib import messages
+from django.contrib.auth.models import User
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import authenticate , login , logout
 
@@ -49,7 +51,7 @@ def resumeform(request):
 
 
 def get_data(request):
-    data= resume.objects.all()
+    data= resume.objects.filter(user=request.user)
     skill = []
     skill_per = []
     interest = []
@@ -125,5 +127,51 @@ def get_out(request):
   logout(request)
   return redirect('/login/')
 
+
+def Create_account(request):
+   
+  if request.method == "POST":
+    uname = request.POST.get('username')
+    email = request.POST.get('email')
+    passw = request.POST.get('password')
+    print(uname,email,passw)
+        
+    if User.objects.filter(username=uname).first():
+      messages.success(request,'username is taken')
+
+    if User.objects.filter(email=email).first():
+      messages.success(request,'email is taken')
+              
+    else:
+      user = User(username=uname,email=email)
+      user.set_password(passw)
+      user.save()
+      messages.success(request,'Account created !!')
+  return render(request,'create_account.html')
+
+
+def login_handle(request):
+  
+  if request.method == "POST":
+    username = request.POST.get('username')
+    password =request.POST.get('password')
+    print(username,password)
+         
+    if not username or not password:
+      messages.success(request,'Boths fields are required !')
+    user_obj = User.objects.filter(username=username).first()
+    user = authenticate(username=username,password=password)
+    if user_obj is None:
+      messages.success(request,'User Not found !')
+    print(user_obj)
+    if user is not None:
+      login(request,user)
+      return redirect('/resume_form/')
+            
+    if user is None:
+      messages.success(request,'Wrong Password !!')
+          
+  
+  return render(request,'Login.html')
 
 

@@ -25,5 +25,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('profile/',views.profile),
     path('profile_form',views.profileform),
-    path('get/',views.get_data)
+    path('get/',views.get_data),
+    path('',views.index),
 ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
