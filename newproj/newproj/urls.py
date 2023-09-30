@@ -23,7 +23,7 @@ from newapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login_handle',views.login_form),
+    path('login_handle/',views.login_form),
     path('resume/',views.resume),
     path('resume_form/',views.resumeform),
     path('get/',views.get_data),
